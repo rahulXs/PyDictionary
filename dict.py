@@ -23,13 +23,16 @@ def dict_main(word):
     else:
         return "word not exits"
 
-
-word = input("enter word: ")
-
-output = dict_main(word)
-if type(output) == list:
-    for i in output:
-        print("-->"+i)
-else:
-    print(output)
+print("enter q to stop")
+while True:
+    word = input("enter word: ")
+    if word=="q":
+        break
+    else:
+        output = dict_main(word)
+        if type(output) == list:
+            for i in output:
+                print("-->"+i)
+        else:
+            print(output)
 
